@@ -1,0 +1,13 @@
+#User function Template for python3
+
+class Solution:
+    def firstRep(self, s):
+        count = {}
+        for ch in s:
+            count[ch] = count.get(ch, 0) + 1  
+
+        for ch in s:
+            if count[ch] > 1:                 
+                return ch
+
+        return '#'
